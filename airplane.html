@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Assignment1</title>
+	</head>
+
+	<body>
+		<script>
+			//Constructor function airplane created for the following parameters: model, seating capacity, maximum speed.
+			function Airplane(model, seatingCapacity, maxSpeed) {
+				this.model = model;
+				this.seatingCapacity = seatingCapacity;
+				this.maxSpeed = maxSpeed;
+				this.print = function print() {
+					console.log("Model : " + this.model);
+					console.log("Seating Capacity : " + this.seatingCapacity);
+					console.log("Maximum Speed : " + this.maxSpeed);
+				}
+			}
+			//Three airplane objects created and print method called.
+			console.log('Three airplane models, their seating capacity and maximum speed:')
+			console.log('----------------------------------------------------------------')
+			var plane1 = new Airplane('Boeing 777', 180, 900);
+			console.log(plane1.print());
+			var plane2 = new Airplane('Boeing A380', 300, 1200);
+			console.log(plane2.print());
+			var plane3 = new Airplane('Bombardier', 60, 700);
+			console.log(plane3.print());
+
+			//Seating capacity increased by 10 and printed.
+			plane1.seatingCapacity += 10;
+			plane2.seatingCapacity += 10;
+			plane3.seatingCapacity += 10;
+			console.log('Seating capacity increased')
+			console.log('--------------------------')
+			console.log(plane1.print())
+			console.log(plane2.print())
+			console.log(plane3.print())
+
+			//Maximum speed deleted for all objects.
+			delete plane1.maxSpeed;
+			delete plane2.maxSpeed;
+			delete plane3.maxSpeed;
+
+			console.log(plane1);
+			console.log(plane2);
+			console.log(plane3);
+
+			//New property = avergage speed created with value = 600.
+			plane1.avgSpeed = 600;
+			plane2.avgSpeed = 600;
+			plane3.avgSpeed = 600;
+
+			//Print.
+			console.log(plane1);
+			console.log(plane2);
+			console.log(plane3);
+		</script>
+	</body>
+</html>
